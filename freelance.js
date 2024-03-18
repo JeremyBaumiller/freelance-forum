@@ -13,19 +13,16 @@ const title = document.createElement("h1");
 title.textContent = "Freelance-Forum";
 body.append(title);
 
-// for (let i = 0; i < freelancers.length; i++) {
-//   employeesNames.textContent = freelancers[i].name;
-//   const employeesPrice = document.createElement("ul");
-//   employeesPrice.textContent = freelancers[i].price;
-//   let Employees = freelancers[i].name;
-//   console.log(freelancers[1].name);
-//   console.log(Employees);
-// }
-let counter = 0;
+for (let i = 0; i < freelancers.length; i++) {
+  const employeesPrice = document.createElement("ul");
+  employeesPrice.textContent = freelancers[i].price;
+  console.log(freelancers[i].name);
+}
+let Counter = 0;
 const countInterval = setInterval(count, 3000);
 function count() {
-  console.log(counter++);
-  if (counter > 8) {
+  console.log(Counter++);
+  if (Counter > 8) {
     clearInterval(countInterval);
   }
 }
