@@ -13,16 +13,27 @@ const title = document.createElement("h1");
 title.textContent = "Freelance-Forum";
 body.append(title);
 
-for (let i = 0; i < freelancers.length; i++) {
-  const employeesPrice = document.createElement("ul");
-  employeesPrice.textContent = freelancers[i].price;
-  console.log(freelancers[i].name);
-}
-let Counter = 0;
+// for (let i = 0; i < freelancers.length; i++) {
+//   const employeesPrice = document.createElement("ul");
+//   employeesPrice.textContent = freelancers[i].price;
+//   info.append;
+// }
+let info = document.querySelector("#information");
+const randomIndex = Math.floor(Math.random() * 8);
+let Counter = 0++;
+const randomName = freelancers[randomIndex];
 const countInterval = setInterval(count, 3000);
+
 function count() {
-  console.log(Counter++);
+  info.append(Counter++);
   if (Counter > 8) {
     clearInterval(countInterval);
+    // info.append(randomName);
+  }
+  for (let i = 0; i < freelancers.length; i++) {
+    const Employee = freelancers[Counter].name;
+    let employeesName = document.createElement("li");
+    employeesName.textContent = Employee;
+    info.append(employeesName);
   }
 }
